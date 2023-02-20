@@ -10,29 +10,26 @@
     "build": "sanity build --output public -y",
     "now-start": "node server.js",
     "start": "sanity start",
+    "dev": "sanity dev",
     "upgrade": "sanity upgrade"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.29.5",
-    "@sanity/core": "^2.29.5",
-    "@sanity/default-layout": "^2.29.5",
-    "@sanity/default-login": "^2.29.5",
-    "@sanity/desk-tool": "^2.29.5",
-    "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/types": "^2.29.5",
-    "@sanity/vision": "^2.29.5",
-    "eslint": "^8.6.0",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
+    "@sanity/eslint-config-studio": "^2.0.1",
+    "@sanity/types": "^3.4.0",
+    "@sanity/vision": "^3.4.0",
+    "eslint": "^8.34.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanity": "^3.4.0",
     "sanity-plugin-documents-pane": "^1.0.5",
     "sanity-plugin-media-library": "^2.0.2",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "@sanity/cli": "^2.29.5"
+    "@sanity/cli": "^3.4.0"
   }
 }

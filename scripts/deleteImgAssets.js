@@ -1,5 +1,5 @@
-import client from 'part:@sanity/base/client';
-const sanityClient = client.withConfig({ 
+import { getCliClient } from 'sanity/cli';
+const sanityClient = getCliClient().withConfig({
   apiVersion: '2022-04-10',
   dataset: 'development'
 });

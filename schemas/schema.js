@@ -1,5 +1,3 @@
-import createSchema from 'part:@sanity/base/schema-creator';
-import schemaTypes from 'all:part:@sanity/base/schema-type';
 // Objects ------------------------------------------------------------------
 import pText from './objects/pText';
 import pTextLite from './objects/pTextLite';
@@ -35,7 +33,4 @@ export const schemaDocs = [
 ];
 
 // Create Schema ---------------------------------------------------------------
-export default createSchema({
-  name: 'default',
-  types: schemaTypes.concat(schemaDocs, schemaObjs),
-});
+export default schemaTypes.concat(schemaDocs, schemaObjs);

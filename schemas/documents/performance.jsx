@@ -1,8 +1,8 @@
 import React from 'react'
 import Icon from '../../components/emojiIcon'
-import client from 'part:@sanity/base/client'
+import { getCliClient } from 'sanity/cli';
 
-const sanityClient = client.withConfig({ apiVersion: '2022-04-10' })
+const sanityClient = getCliClient().withConfig({ apiVersion: '2022-04-10' })
 
 // const titleSlug = async (input) => {
 //   const query = `*[_type == 'performance' && _id == $id][0]{
@@ -115,9 +115,9 @@ function titleSlugify(input) {
     return console.log(result)
     // return `${shortDate} - ${result.show} at ${result.venue}`
   }
-} 
+}
 ...
-{ 
+{
       // -------------------------------------------------- WORKING . . . //
       name: 'title',
       title: 'Title',
