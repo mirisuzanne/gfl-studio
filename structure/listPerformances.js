@@ -1,7 +1,6 @@
-import S from '@sanity/desk-tool/structure-builder'
-import client from 'part:@sanity/base/client'
+import { getCliClient } from 'sanity/cli';
 
-const sanityClient = client.withConfig({ apiVersion: '2022-04-10' })
+const sanityClient = getCliClient().withConfig({ apiVersion: '2022-04-10' })
 
 const query = /* groq */ `{
   "shows": *[_type == "show" && !(_id in path("drafts.**"))]{title, _id},
@@ -12,7 +11,7 @@ const query = /* groq */ `{
   }
 }`
 
-export default S.listItem()
+export default (S) => S.listItem()
   .title('Performances')
   .child(async () => {
     const { shows, perfs } = await sanityClient.fetch(query)
